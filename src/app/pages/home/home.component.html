@@ -1,0 +1,59 @@
+<app-loading *ngIf="loading"></app-loading>
+<!-- SLIDER -->
+<div class="container-slider" *ngIf="!loading">
+  <button class="button-back btn" (click)="moveSlider(1)">
+    <img src="assets/icons/Trazado 49.svg" alt="back" />
+  </button>
+
+  <div class="slider">
+    <ul id="slider" style="{{ styleSlider }}">
+      <li class="slider-section">
+        <img src="assets/images/banner-principal-desktop.png" alt="..." />
+      </li>
+      <li class="slider-section">
+        <img src="assets/images/banner-principal-desktop.png" alt="..." />
+      </li>
+    </ul>
+    <div class="container-btn">
+      <div
+        class="btn-img"
+        style="{{
+          p == 0
+            ? 'background-color: var(--white)'
+            : 'background-color: var(--gray)'
+        }}"
+      ></div>
+      <div
+        class="btn-img"
+        style="{{
+          p == 1
+            ? 'background-color: var(--white)'
+            : 'background-color: var(--gray)'
+        }}"
+      ></div>
+    </div>
+  </div>
+
+  <button class="button-end btn" (click)="moveSlider(2)">
+    <img src="assets/icons/Trazado 50.svg" alt="" />
+  </button>
+</div>
+<!-- fin slider -->
+<div class="section" *ngIf="!loading">
+  <div class="col">
+    <h1>MODA INFANTIL</h1>
+    <img
+      src="assets/images/categorias-destacadas-moda-infantil.png"
+      alt="moda infantil"
+    />
+  </div>
+  <div class="col">
+    <h1>PROTECCIÓN</h1>
+    <img
+      src="assets/images/categorias-destacadas-proteccion.png"
+      alt="protección"
+    />
+  </div>
+</div>
+<!-- mas buscados  -->
+<app-mas-buscados></app-mas-buscados>

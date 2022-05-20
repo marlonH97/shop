@@ -1,0 +1,119 @@
+/* slider*/
+.container-slider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.col h1{
+  text-shadow: 1px 1px 2px black;
+}
+.slider {
+  text-align: center;
+  width: 100%;
+  margin-top: -1em;
+  padding-top: 0;
+  overflow: hidden;
+}
+.slider ul {
+  display: flex;
+  padding: 0;
+  width: 200%;
+  transition: 1s all;
+  animation-direction: alternate;
+}
+.slider ul li {
+  list-style: none;
+}
+.slider ul li img {
+  width: 100%;
+  position: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.button-back {
+  position: absolute;
+  left: 0;
+  margin-left: 2em;
+  border: none;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.button-end {
+  position: absolute;
+  right: 0;
+  margin-right: 2em;
+  opacity: 0.7;
+  cursor: pointer;
+  border: none;
+}
+
+.container-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-top: -4em;
+  left: 50%;
+}
+.btn-img {
+  margin: 5px;
+  height: 1.2em;
+  width: 1.2em;
+  border-radius: 100%;
+  background-color: var(--light);
+}
+
+/* seccion */
+
+.section {
+  width: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.col img {
+  width: 90%;
+  object-fit: cover;
+}
+
+.col h1 {
+  position: absolute;
+  color: var(--white);
+  margin-top: 12em;
+}
+
+/* responsive */
+@media screen and (max-width: 768px) {
+  .slider-section {
+    min-height: 100%;
+  }
+  .slider-section img {
+    content: url("../../../assets/images/banner-principal-mobile.png");
+    object-fit: contain;
+  }
+  .btn img{
+    height: 2em;
+    opacity: .9;
+  }
+  .section{
+    display: block;
+  }
+  .col{
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+
+  .col h1{
+    margin-top: 5em;
+  }
+}

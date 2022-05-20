@@ -1,0 +1,57 @@
+<!-- barra de busqueda -->
+<div class="searchbar">
+  <div class="title">
+    <span class="menu">☰</span>
+    <h1><a [routerLink]="['home']">CLOTHESSTORE</a></h1>
+  </div>
+  <div class="bar">
+    <div class="group">
+      <!-- <div class="group"> -->
+      <input
+        type="text"
+        class="input-search"
+        maxlength="100"
+        placeholder="Buscar aquí producto"
+        autocomplete="off"
+        #buscar
+      />
+      <!-- </div> -->
+      <!-- <div class="group"> -->
+      <button class="button" (click)="buscarProducto(buscar.value)">
+        <img src="../assets/icons/Icon ionic-ios-search.svg" alt="buscar" />
+      </button>
+      <!-- </div> -->
+    </div>
+  </div>
+  <div class="buttons">
+    <div class="car">
+      <div class="not">
+        <small>12</small>
+      </div>
+      <img src="../assets/icons/icon-cart.svg" alt="carrito" />
+    </div>
+    <div class="user">
+      <img src="../assets/icons/icon-user.svg" alt="carrito" />
+    </div>
+    <div class="login">
+      <button class="button-login">Iniciar Sesión</button>
+    </div>
+  </div>
+</div>
+
+<!-- barra de navegación -->
+<div class="navbar">
+  <div class="parent">
+    <a [routerLink]="['hombre']" class="child">Hombre</a>
+    <div class="vr"></div>
+    <a [routerLink]="['mujer']" class="child">Mujer</a>
+    <div class="vr"></div>
+    <a [routerLink]="['junior']" class="child">Junior</a>
+    <div class="vr"></div>
+    <a [routerLink]="['ninos']" class="child">Niños</a>
+    <div class="vr"></div>
+    <a [routerLink]="['accesorios']" class="child">Accesorios</a>
+    <div class="vr"></div>
+    <a [routerLink]="['ofertas']" class="child">Ofertas</a>
+  </div>
+</div>
