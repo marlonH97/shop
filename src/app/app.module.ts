@@ -16,6 +16,7 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
 import { ResultsPipe } from './pipes/results.pipe';
 import { LoadingComponent } from './components/loading/loading.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { ModalComponent } from './components/modal/modal.component';
   ],
   providers: [
     MasBucadosServiceService,
-    // {provide: LocationStrategy, useClass: HashLocationStrategy}
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
