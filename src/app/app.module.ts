@@ -15,12 +15,6 @@ import { HttpClientModule } from "@angular/common/http";
 import { BuscarComponent } from './pages/buscar/buscar.component';
 import { ResultsPipe } from './pipes/results.pipe';
 import { LoadingComponent } from './components/loading/loading.component';
-import { HombreComponent } from './pages/hombre/hombre.component';
-import { MujerComponent } from './pages/mujer/mujer.component';
-import { JuniorComponent } from './pages/junior/junior.component';
-import { NinosComponent } from './pages/ninos/ninos.component';
-import { AccesoriosComponent } from './pages/accesorios/accesorios.component';
-import { OfertasComponent } from './pages/ofertas/ofertas.component';
 import { ModalComponent } from './components/modal/modal.component';
 @NgModule({
   declarations: [
@@ -32,12 +26,6 @@ import { ModalComponent } from './components/modal/modal.component';
     BuscarComponent,
     ResultsPipe,
     LoadingComponent,
-    HombreComponent,
-    MujerComponent,
-    JuniorComponent,
-    NinosComponent,
-    AccesoriosComponent,
-    OfertasComponent,
     ModalComponent
   ],
   imports: [
