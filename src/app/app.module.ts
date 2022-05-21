@@ -36,7 +36,8 @@ import { ModalComponent } from './components/modal/modal.component';
     APP_ROUTING
   ],
   providers: [
-    MasBucadosServiceService
+    MasBucadosServiceService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
