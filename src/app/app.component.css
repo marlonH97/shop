@@ -242,17 +242,22 @@ footer a {
   text-align: left;
   width: 40%;
 }
+.title h1 {
+  font-weight: bold;
+  font-family: "Bebas Neue", cursiva;
+  color: #000;
+}
 .more {
   display: none;
 }
 
-#m1{
+#m1 {
   display: none;
 }
-#m1:checked ~ div{
+#m1:checked ~ div {
   margin-left: 0;
 }
-.close{
+.close {
   display: none;
 }
 /* Responsive Styles */
@@ -271,7 +276,7 @@ footer a {
     margin-left: -200px;
     transition: 400ms ease-in;
   }
-  .close{
+  .close {
     position: absolute;
     bottom: 0;
     display: block;
@@ -337,6 +342,9 @@ footer a {
     font-size: x-large;
     padding-bottom: 0.2em;
     padding-left: 0.3em;
+    font-weight: bold;
+    font-family: "Bebas Neue", cursiva;
+    color: #000;
   }
   .menu {
     display: block;

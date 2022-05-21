@@ -16,6 +16,7 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
 import { ResultsPipe } from './pipes/results.pipe';
 import { LoadingComponent } from './components/loading/loading.component';
 import { ModalComponent } from './components/modal/modal.component';
+
 @NgModule({
   declarations: [
     AppComponent,
