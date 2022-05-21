@@ -28,7 +28,7 @@
   height: 400px;
   min-height: 150px;
   border: 1px solid #eee;
-  background-color: var(--gray);
+  background-color: var(--light);
   flex-direction: row;
   transition: all 0.2s ease-in-out;
   line-height: 24px;
