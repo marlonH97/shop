@@ -37,7 +37,7 @@ import { ModalComponent } from './components/modal/modal.component';
   ],
   providers: [
     MasBucadosServiceService,
-    {provide: LocationStrategy, useClass: HashLocationStrategy}
+    // {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })

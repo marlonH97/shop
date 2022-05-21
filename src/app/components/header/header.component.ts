@@ -6,7 +6,8 @@ import { CarritoServiceService } from 'src/app/services/carrito-service.service'
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['../../app.component.css']
+  styleUrls: ['../../app.component.css',
+    './header.component.css']
 })
 
 export class HeaderComponent implements OnInit {
@@ -45,7 +46,7 @@ export class HeaderComponent implements OnInit {
   }
 
   showMenu() {
- 
+
   }
 
 }
