@@ -13,7 +13,6 @@ import { MasBuscadosComponent } from './components/mas-buscados/mas-buscados.com
 import { MasBucadosServiceService } from './services/mas-bucados-service.service';
 import { HttpClientModule } from "@angular/common/http";
 import { BuscarComponent } from './pages/buscar/buscar.component';
-import { ResultsPipe } from './pipes/results.pipe';
 import { LoadingComponent } from './components/loading/loading.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
@@ -26,7 +25,6 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HomeComponent,
     MasBuscadosComponent,
     BuscarComponent,
-    ResultsPipe,
     LoadingComponent,
     ModalComponent
   ],

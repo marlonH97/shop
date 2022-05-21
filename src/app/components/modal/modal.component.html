@@ -14,7 +14,7 @@
             <h4>{{ item.name }} X {{ item.ammount }}</h4>
           </div>
           <div class="total">
-            <h4>${{ item.price * item.ammount | number: "3.1-2" }}</h4>
+            <h4>${{ item.price * item.ammount | number: "3.0" }}</h4>
           </div>
           <div class="col-buttons">
             <button class="btn-eliminar" (click)="eliminarProducto(item.id)">
@@ -37,7 +37,7 @@
         <div class="col-total">
           <h4>
             Total a pagar: <br />
-            ${{ s | number: "3.1-2" }}
+            ${{ s | number: "3.0" }}
           </h4>
         </div>
         <div class="col-button">
