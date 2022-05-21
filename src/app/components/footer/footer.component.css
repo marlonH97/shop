@@ -1,43 +1,59 @@
-    /* pie */
-    .foot {
-        display: block;
-        padding: 1em;
-      }
-      .foot .col {
-        margin: 1em;
-        padding: 0;
-      }
-      .r {
-        border-bottom: 1px solid var(--gray);
-      }
-      .foot .col h3 {
-        margin: 1em;
-      }
-      .foot .sub-menu {
-        /* padding: 0 18px; */
-        background-color: white;
-        display: none;
-        overflow: hidden;
-      }
-      .col .more {
-        display: block;
-        position: absolute;
-        font-size: x-large;
-        font-weight: 900;
-        right: 0;
-        margin-top: -1.8em;
-        margin-right: 2em;
-      }
-      .foot .inf {
-        margin-left: 1em;
-      }
-    
-      .footer hr {
-        display: none;
-        opacity: 0;
-      }
-      .foot .sub-menu a {
-        float: none;
-        width: 150px;
-      }
-    }
+  .foot {
+    position: relative;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background-color: var(--dark);
+    height: auto;
+    color: var(--white);
+    margin-bottom: 0px;
+  }
+  .col {
+    padding-top: 6em;
+    margin: auto;
+    color: var(--white);
+    margin-top: -50px;
+    padding-bottom: 3em;
+  }
+  .col h3 {
+    margin-bottom: 2em;
+  }
+  .col a {
+    text-decoration: none;
+    color: var(--white);
+    margin-bottom: 1em;
+  }
+  .inf {
+    display: flex;
+  }
+  .inf a {
+    margin: 0.5em;
+  }
+  .inf a img {
+    width: 2em;
+  }
+  .footer {
+    /* margin-bottom: 1em; */
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .footer hr {
+    margin-top: 0px;
+    opacity: 0.5;
+    width: 96%;
+  }
+  
+  footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+  
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+  .group {
+    display: flex;
+  }
