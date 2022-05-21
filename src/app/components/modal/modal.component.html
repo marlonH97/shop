@@ -1,0 +1,51 @@
+<div class="modaloverlay">
+  <div class="modal">
+    <button (click)="closeModal()" class="close">X</button>
+    <!-- body -->
+    <div>
+      <h1 class="modal-titulo">COMFIRMA TU COMPRA</h1>
+      <!-- lista de productos -->
+      <div class="productos-container">
+        <div class="row" *ngFor="let item of productos" id="{{ item.id }}">
+          <div class="col-img">
+            <img src="{{ item.image }}" alt="..." />
+          </div>
+          <div class="col-info">
+            <h4>{{ item.name }} X {{ item.ammount }}</h4>
+          </div>
+          <div class="total">
+            <h4>${{ item.price * item.ammount | number: "3.1-2" }}</h4>
+          </div>
+          <div class="col-buttons">
+            <button class="btn-eliminar" (click)="eliminarProducto(item.id)">
+              Eliminar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- foot -->
+    <div class="modal-footer" *ngIf="productos.length != 0">
+      <div class="row">
+        <h2 class="t-total">INFORMACIÓN DE PAGO</h2>
+        <div class="col-cant">
+          <h4>
+            Total Productos:<br />
+            {{ c }}
+          </h4>
+        </div>
+        <div class="col-total">
+          <h4>
+            Total a pagar: <br />
+            ${{ s | number: "3.1-2" }}
+          </h4>
+        </div>
+        <div class="col-button">
+          <button class="btn-confirmar btn-eliminar" (click)="confirmar()">
+            Comfirmar!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

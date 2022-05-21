@@ -1,28 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import { CarritoServiceService } from 'src/app/services/carrito-service.service';
 import { MasBucadosServiceService } from '../../services/mas-bucados-service.service';
+import { CarritoInterface } from 'src/app/interfaces/carrito-interface';
+
 @Component({
   selector: 'app-mas-buscados',
   templateUrl: './mas-buscados.component.html',
   styleUrls: ['./mas-buscados.component.css']
 })
-export class MasBuscadosComponent implements OnInit {
+export class MasBuscadosComponent {
 
   dataProducts: any = [];
   styles: string = "";
   private c: number = 0;
   loading: Boolean = true;
-  constructor(private service: MasBucadosServiceService) {
-  }
-
-  ngOnInit(): void {
+  private data: CarritoInterface = { id: "", name: "", image: "", price: 0, ammount: 0, total: 0 };
+  constructor(private service: MasBucadosServiceService, private carrito: CarritoServiceService) {
     this.getProductos();
   }
 
-  /**buscar los productos */
-
   private getProductos() {
+
     this.service.getProducto('').subscribe((data: any) => {
-      this.dataProducts = data;
+
+      for (let i = 0; i < data.length; i++) {
+
+        const element = data[i];
+        element.visible = this.carrito.getForId(element.id);
+        this.dataProducts.push(element);
+
+      }
+
       this.loading = false;
     });
   }
@@ -43,6 +51,24 @@ export class MasBuscadosComponent implements OnInit {
       this.c = (this.c > 22) ? this.c - 23 : this.c;
       this.styles = (this.c <= 23) ? `margin-left:0;` : `margin-left: -${this.c}em;`;
     }
+
+  }
+
+  addProducto(id: string, name: string, image: string, price: number, total: number) {
+
+    this.data.id = id;
+    this.data.name = name;
+    this.data.price = price;
+    this.data.image = image
+    this.data.ammount = 1;
+    this.data.total = total;
+
+    if (!this.carrito.agregarProducto(this.data)) {
+      alert('Lo sentimos no podemos agregar este producto');
+      return;
+    }
+
+    document.querySelector(`#${id}`)?.remove();
 
   }
 }

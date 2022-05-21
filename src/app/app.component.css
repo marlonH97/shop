@@ -246,17 +246,41 @@ footer a {
   display: none;
 }
 
+#m1{
+  display: none;
+}
+#m1:checked ~ div{
+  margin-left: 0;
+}
+.close{
+  display: none;
+}
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   /* header */
   .navbar {
-    position: absolute;
+    position: fixed;
+    width: 200px;
     left: 0;
     top: 0;
     display: block;
-    min-height: 600px;
-    opacity: 0.8;
-    display: none;
+    min-height: 400px;
+    opacity: 0.9;
+    z-index: 9999;
+    /* display: none; */
+    margin-left: -200px;
+    transition: 400ms ease-in;
+  }
+  .close{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    padding-bottom: 1em;
   }
   .navbar .parent {
     display: block;
@@ -357,8 +381,8 @@ footer a {
   .foot .inf {
     margin-left: 1em;
   }
- 
-  .footer hr{
+
+  .footer hr {
     display: none;
     opacity: 0;
   }

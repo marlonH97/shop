@@ -1,12 +1,23 @@
 <app-loading *ngIf="loading"></app-loading>
-<h1 style="text-align: center; color: var(--dark)" class="titulo-mas" *ngIf="!loading">PRODUCTOS MÁS BUSCADOS</h1>
+<h1
+  style="text-align: center; color: var(--dark)"
+  class="titulo-mas"
+  *ngIf="!loading"
+>
+  PRODUCTOS MÁS BUSCADOS
+</h1>
 <div class="content" *ngIf="!loading">
   <button class="button-back btn" (click)="move(1)">
     <img src="assets/icons/Trazado 49.svg" alt="back" />
   </button>
   <div class="container">
     <div class="card-container" style="{{ styles }}">
-      <div class="card" *ngFor="let item of dataProducts">
+      <div
+        class="card"
+        *ngFor="let item of dataProducts"
+        id="{{ item.id }}"
+        style="display:{{ item.visible ? 'none' : '' }};"
+      >
         <div class="card-header">
           <img src="{{ item.thumbnail }}" alt="" />
         </div>
@@ -18,7 +29,18 @@
             <strong>${{ item.price }}</strong>
             <span class="sale">${{ item.price }}</span>
           </div>
-          <button class="btn-add">
+          <button
+            class="btn-add"
+            (click)="
+              addProducto(
+                item.id,
+                item.title,
+                item.thumbnail,
+                item.price,
+                item.available_quantity
+              )
+            "
+          >
             <img src="../assets/icons/shopping-cart.png" alt="..." />
             Agregar al carrito
           </button>

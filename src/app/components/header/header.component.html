@@ -1,7 +1,9 @@
 <!-- barra de busqueda -->
+
+<input type="checkbox" id="m1">
 <div class="searchbar">
   <div class="title">
-    <span class="menu">☰</span>
+    <label class="menu" for="m1">☰</label>
     <h1><a [routerLink]="['home']">CLOTHESSTORE</a></h1>
   </div>
   <div class="bar">
@@ -24,9 +26,9 @@
     </div>
   </div>
   <div class="buttons">
-    <div class="car">
-      <div class="not">
-        <small>12</small>
+    <div class="car" (click)="openModal()">
+      <div class="not" *ngIf="products.length != 0">
+        <small>{{ products.length }}</small>
       </div>
       <img src="../assets/icons/icon-cart.svg" alt="carrito" />
     </div>
@@ -54,4 +56,5 @@
     <div class="vr"></div>
     <a [routerLink]="['ofertas']" class="child">Ofertas</a>
   </div>
+  <label for="m1" class="close">X</label>
 </div>

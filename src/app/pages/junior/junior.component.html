@@ -1,28 +1,53 @@
 <app-loading *ngIf="loading"></app-loading>
 
 <div class="content" *ngIf="!loading">
+
   <div class="container">
-    <div class="card" *ngFor="let item of resultados">
+    
+    <div
+      class="card"
+      *ngFor="let item of resultados"
+      id="{{ item.id }}"
+      style="display:{{ item.visible ? 'none' : '' }};"
+    >
+
       <div class="card-header">
         <img src="{{ item.thumbnail }}" alt="" />
       </div>
+
       <div class="card-body">
+
         <div class="desc">
           <span title="{{ item.title }}">{{ item.title }}</span>
         </div>
+
         <div class="prices">
           <strong>${{ item.price }}</strong>
           <span class="sale">${{ item.price }}</span>
         </div>
-        <button class="btn-add">
+
+        <button
+          class="btn-add"
+          (click)="
+            addProducto(
+              item.id,
+              item.title,
+              item.thumbnail,
+              item.price,
+              item.available_quantity
+            )
+          "
+        >
           <img src="../assets/icons/shopping-cart.png" alt="..." />
           Agregar al carrito
         </button>
+
       </div>
     </div>
   </div>
 </div>
 
+<!-- error page -->
 <div class="fullHeight" *ngIf="resultados.length == 0 && !loading">
   <div>
     <img src="assets/icons/Icon ionic-ios-search.svg" alt="" />
@@ -31,4 +56,3 @@
 </div>
 
 <div class="fullHeight" *ngIf="loading"></div>
-

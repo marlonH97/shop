@@ -21,6 +21,7 @@ import { JuniorComponent } from './pages/junior/junior.component';
 import { NinosComponent } from './pages/ninos/ninos.component';
 import { AccesoriosComponent } from './pages/accesorios/accesorios.component';
 import { OfertasComponent } from './pages/ofertas/ofertas.component';
+import { ModalComponent } from './components/modal/modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { OfertasComponent } from './pages/ofertas/ofertas.component';
     JuniorComponent,
     NinosComponent,
     AccesoriosComponent,
-    OfertasComponent
+    OfertasComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

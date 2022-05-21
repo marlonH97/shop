@@ -1,17 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalServiceService } from 'src/app/services/modal-service.service';
+import { CarritoServiceService } from 'src/app/services/carrito-service.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['../../app.component.css']
 })
+
 export class HeaderComponent implements OnInit {
 
+  style: string = "";
   search: string = "";
-
-  constructor(private router: Router) { }
+  products: any[] = [];
+  constructor(private router: Router, private modal: ModalServiceService, private carrito: CarritoServiceService) {
+    this.products = this.carrito.listarProductos();
+  }
 
   ngOnInit(): void {
+
+    this.carrito.$carrito.subscribe((datos) => {
+      this.products = datos;
+    });
+
   }
 
   buscarProducto(input: string) {
@@ -22,6 +34,18 @@ export class HeaderComponent implements OnInit {
       this.router.navigate(['/buscar', val]);
     }
 
+  }
+
+  openModal() {
+
+    if (this.products.length != 0) {
+      this.modal.$modal.emit(true);
+    }
+
+  }
+
+  showMenu() {
+ 
   }
 
 }
