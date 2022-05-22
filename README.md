@@ -17,20 +17,20 @@ Este proyecto está realizado en Angular, se trata de una prueba técnica para E
   Nota: Si no cuentas con **NPM** [haz lo siguiente](#instalación-npm)
 - Para Iniciar el Proyecto  ejecuta el comando `ng serve` en la consola ,  si no cuentas con **Angular CLI** [has lo siguiente](#instalación-angular) 
 - Para Visualizar el proyecto entra a http://localhost:4200/#/home desde el navegador web.
-- 
+
 ## Instalación NPM
 
 - Entra a [Node JS Download](https://nodejs.org/es/download/) y descarga el paquete que se acople a tu sistema operativo
 - Ejecutar el instalador descargado
 - Escribe en la ventana de comandos el siguiente comando `node -v`
 - Así validarás que esta instalado en tu equipo
-- Ten en cuenta que este proyecto utiliza la versión `13.2.6` de Angular.
+
 ## Instalación Angular
 
 - Ejecuta  el comando `npm install -g @angular/cli` en la consola, recuerda que para que esta instalación se lleve a cabo debes tener instalado Node JS.
 - Con el comando `ng version` puedes validar que se instaló correctamente.
 - Desde este enlace puedes obtener más información al respecto [Angular](https://angular.io/cli).
-
+- Ten en cuenta que este proyecto utiliza la versión `13.2.6` de Angular.
 # 2. Contenido del proyecto
 
 - Home
