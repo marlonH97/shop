@@ -1,27 +1,46 @@
-# Shop
+# Clothes Store Por Marlon Herrera
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+Este proyecto está realizado en Angular, se trata de una prueba técnica para Experimentality Labs
 
-## Development server
+### Contenido
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Configuración o puesta en marcha](#1-configuración-o-puesta-en-marcha)
+- [Contenido del proyecto](#2-contenido-del-proyecto)
+- [Ver en marcha](#3-ver-en-marcha)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# 1. Configuración o puesta en marcha
 
-## Build
+- Clona el repositorio [Repositorio Git Hub](https://github.com/marlonH97/shop) `https://github.com/marlonH97/shop`
+- Ingresa de la siguiente manera `cd shop` desde la Desde la consola de comandos 
+- Ejecuta el siguiente comando `npm install`
+  Nota: Si no cuentas con **NPM** [haz lo siguiente](#instalación-npm)
+- Después debes iniciar el comando `ng serve` ,  si no cuentas con Angular [has lo siguiente](#instalación-angular) 
+- Para Visualizar el proyecto entra a http://localhost:4200/#/home desde el navegador web.
+- 
+## Instalación NPM
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Entra a [Node JS Download](https://nodejs.org/es/download/) y descarga el paquete que se acople a tu sistema operativo
+- Ejecutar el instalador descargado
+- Escribe en la ventana de comandos el siguiente comando `node -v`
+- Así validarás que esta instalado en tu equipo
+- Ten en cuenta que este proyecto utiliza la versión `13.2.6` de Angular.
+## Instalación Angular
 
-## Running unit tests
+- Ejecuta  el comando `npm install -g @angular/cli` en la consola, recuerda que para que esta instalación se lleve a cabo debes tener instalado Node JS.
+- Con el comando `ng version` puedes validar que se instaló correctamente.
+- Desde este enlace puedes obtener más información al respecto [Angular](https://angular.io/cli).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# 2. Contenido del proyecto
 
-## Running end-to-end tests
+- Home
+- Carrito de compras
+- Sección Mujeres 
+- Sección hombres
+- Sección Niños
+- Sección Ofertas
+- Búsqueda 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# 3. Ver en marcha
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Para visualizar el proyecto puedes hacerlo a través de Github Pages en el siguiente link: [ClotesStore](https://marlonh97.github.io/shop/#/hombre/hombres)
