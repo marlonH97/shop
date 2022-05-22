@@ -11,7 +11,7 @@ Este proyecto está realizado en Angular, se trata de una prueba técnica para E
 
 # 1. Configuración o puesta en marcha
 
-- Clona el repositorio [Repositorio Git Hub](https://github.com/marlonH97/shop) `https://github.com/marlonH97/shop`
+- Clona el repositorio [Repositorio Git Hub](https://github.com/marlonH97/shop.git) `https://github.com/marlonH97/shop`
 - Ingresa de la siguiente manera `cd shop` desde la Desde la consola de comandos 
 - Ejecuta el siguiente comando `npm install`
   Nota: Si no cuentas con **NPM** [haz lo siguiente](#instalación-npm)
