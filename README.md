@@ -43,4 +43,4 @@ Este proyecto está realizado en Angular, se trata de una prueba técnica para E
 
 # 3. Ver en marcha
 
-- Para visualizar el proyecto puedes hacerlo a través de Github Pages en el siguiente link: [ClotesStore](https://marlonh97.github.io/shop/#/hombre/hombres)
+- Para visualizar el proyecto puedes hacerlo a través de Git Hub Pages en el siguiente link: [ClotesStore](https://marlonh97.github.io/shop/#/hombre/hombres)
