@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CarritoServiceService } from 'src/app/services/carrito-service.service';
 import { MasBucadosServiceService } from '../../services/mas-bucados-service.service';
 import { CarritoInterface } from 'src/app/interfaces/carrito-interface';
+import { ModalServiceService } from 'src/app/services/modal-service.service';
 
 @Component({
   selector: 'app-mas-buscados',
@@ -15,7 +16,7 @@ export class MasBuscadosComponent {
   private c: number = 0;
   loading: Boolean = true;
   private data: CarritoInterface = { id: "", name: "", image: "", price: 0, ammount: 0, total: 0 };
-  constructor(private service: MasBucadosServiceService, private carrito: CarritoServiceService) {
+  constructor(private service: MasBucadosServiceService, private carrito: CarritoServiceService, private mensajes: ModalServiceService) {
     this.getProductos();
   }
 
@@ -64,11 +65,12 @@ export class MasBuscadosComponent {
     this.data.total = total;
 
     if (!this.carrito.agregarProducto(this.data)) {
-      alert('Lo sentimos no podemos agregar este producto');
+      this.mensajes.$mensaje.emit({ tipo: 'warning', mensaje: 'Lo sentimos no podemos agregar este producto' });
       return;
     }
 
     document.querySelector(`#${id}`)?.remove();
+    this.mensajes.$mensaje.emit({ tipo: 'success', mensaje: 'El producto se agrego al carrito' });
 
   }
 }

@@ -16,6 +16,7 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { MensajesComponent } from './components/mensajes/mensajes.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     MasBuscadosComponent,
     BuscarComponent,
     LoadingComponent,
-    ModalComponent
+    ModalComponent,
+    MensajesComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { CarritoServiceService } from 'src/app/services/carrito-service.service'
 export class ModalComponent implements OnInit {
 
   productos: any[] = [];
+  idRemove: string = "";
   s: number = 0;
   c: number = 0;
 
@@ -25,12 +26,20 @@ export class ModalComponent implements OnInit {
   eliminarProducto(id: string) {
 
     if (!this.servicio.quitarProducto(id)) {
-      alert('No se pudo quitar el producto');
-      // return;
-    }
 
+      this.modal.$mensaje.emit({ tipo: "warning", mensaje: "No se pudo quitar el producto" });
+      return;
+
+    }
+    // this.idRemove = id;
     document.querySelector(`#${id}`)?.remove();
-    this.cal();
+
+    setTimeout(() => {
+
+      this.cal();
+      this.modal.$mensaje.emit({tipo:"success",mensaje:"se quito el producto correctamente"});
+
+    }, 200);
 
   }
 
@@ -59,8 +68,9 @@ export class ModalComponent implements OnInit {
     if (confirm('¿esta seguro que desea confirmar la compra?')) {
       this.servicio.eliminarCarrito();
       this.cal();
+      this.modal.$mensaje.emit({ tipo: "success", mensaje: "Confirmación Exitosa! Gracias." });
     }
-    
+
   }
 
   closeModal() {

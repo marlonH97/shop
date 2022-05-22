@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CarritoServiceService } from 'src/app/services/carrito-service.service';
 import { MasBucadosServiceService } from 'src/app/services/mas-bucados-service.service';
 import { CarritoInterface } from 'src/app/interfaces/carrito-interface';
+import { ModalServiceService } from 'src/app/services/modal-service.service';
 
 @Component({
   selector: 'app-buscar',
@@ -16,7 +17,7 @@ export class BuscarComponent implements OnInit {
   resultados: any[] = [];
   loading: Boolean = true;
 
-  constructor(private router: ActivatedRoute, private service: MasBucadosServiceService, private carrito: CarritoServiceService) {
+  constructor(private router: ActivatedRoute, private service: MasBucadosServiceService, private carrito: CarritoServiceService, private mensajes: ModalServiceService) {
 
     this.router.params.subscribe((params: any) => {
 
@@ -55,11 +56,11 @@ export class BuscarComponent implements OnInit {
     this.data.total = total;
 
     if (!this.carrito.agregarProducto(this.data)) {
-      alert('Lo sentimos no podemos agregar este producto');
+      this.mensajes.$mensaje.emit({ tipo: 'warning', mensaje: 'Lo sentimos no podemos agregar este producto' });
       return;
     }
 
+    this.mensajes.$mensaje.emit({ tipo: 'success', mensaje: 'El producto se agrego al carrito' });
     document.querySelector(`#${id}`)?.remove();
-
   }
 }
