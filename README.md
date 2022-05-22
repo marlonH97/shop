@@ -29,8 +29,8 @@ Este proyecto está realizado en Angular, se trata de una prueba técnica para E
 
 - Ejecuta  el comando `npm install -g @angular/cli` en la consola, recuerda que para que esta instalación se lleve a cabo debes tener instalado Node JS.
 - Con el comando `ng version` puedes validar que se instaló correctamente.
-- Desde este enlace puedes obtener más información al respecto [Angular](https://angular.io/cli).
-- Ten en cuenta que este proyecto utiliza la versión `13.2.6` de Angular.
+- Desde este enlace puedes obtener más información al respecto [Angular CLI](https://angular.io/cli).
+- Ten en cuenta que este proyecto utiliza la versión `13.2.6` de Angular CLI.
 # 2. Contenido del proyecto
 
 - Home
