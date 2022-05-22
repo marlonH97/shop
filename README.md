@@ -15,7 +15,7 @@ Este proyecto está realizado en Angular, se trata de una prueba técnica para E
 - Ingresa de la siguiente manera `cd shop` desde la Desde la consola de comandos 
 - Ejecuta el siguiente comando `npm install`
   Nota: Si no cuentas con **NPM** [haz lo siguiente](#instalación-npm)
-- Para Iniciar el Proyecto  ejecuta el comando `ng serve` en la consola ,  si no cuentas con **Angular** CLI [has lo siguiente](#instalación-angular) 
+- Para Iniciar el Proyecto  ejecuta el comando `ng serve` en la consola ,  si no cuentas con **Angular CLI** [has lo siguiente](#instalación-angular) 
 - Para Visualizar el proyecto entra a http://localhost:4200/#/home desde el navegador web.
 - 
 ## Instalación NPM
